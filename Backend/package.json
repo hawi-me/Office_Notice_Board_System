@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "office-notice-board-backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node Backend/server.js",
+    "server": "nodemon Backend/server.js"
+  },
+  "author": "hawi",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
