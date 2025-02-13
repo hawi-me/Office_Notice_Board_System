@@ -47,11 +47,11 @@ const NoticeSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    scheduledDate: {
+    scheduledStartDate: {
       type: Date,
       default: Date.now,
     },
-    visibilityDuration: {
+    scheduleEnddate: {
       type: Number, // In days
       default: 7, // Default to 7 days
     },
