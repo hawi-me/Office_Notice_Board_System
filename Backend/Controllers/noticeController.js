@@ -12,16 +12,17 @@ const createNotice = asynchandle(async (req,res) =>{
     
     res.status(200).json(notice);
 })
+
 //@desc Get notice
 //@route Get /api/notice
 //@access public
 
 const getNotice = asynchandle( async (req,res) =>{
     const notice = await Notice.find();
-    // if (!res.body.text) {
-    //     res.status(400)
-    //     throw new Error('Please enter a notice')
-    // }
+    if (!res.body.text) {
+        res.status(400)
+        throw new Error('Please enter a notice')
+    }
     res.status(200).json(notice);
 })
 //@desc Update notice
