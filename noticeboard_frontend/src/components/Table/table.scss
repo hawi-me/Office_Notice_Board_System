@@ -1,0 +1,95 @@
+.table {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  .MuiTable-root {
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .tableCell {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 16px;
+    background-color: #2556;
+    color: #fff;             
+
+  }
+
+  thead {
+    background-color: #2555a6;
+    color: white;
+  }
+
+  tbody tr {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+
+  .status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+
+    &.published {
+      background-color: #28a745;
+      color: white;
+    }
+
+    &.pending {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    &.draft {
+      background-color: #6c757d;
+      color: white;
+    }
+  }
+
+  /* 🌙 Dark Mode Styles */
+  .dark & {
+    background-color: #1e1e1e;
+    color: #fff;
+
+    .MuiTable-root {
+      background-color: #2c2c2c;
+      color: #ddd;
+    }
+
+    thead {
+      background-color: #444;
+    }
+
+    tbody tr:hover {
+      background-color: #333;
+    }
+
+    .tableCell {
+      color: #ddd;
+    }
+
+    .status {
+      &.published {
+        background-color: #1db954;
+      }
+
+      &.pending {
+        background-color: #ffcc00;
+        color: black;
+      }
+
+      &.draft {
+        background-color: #555;
+      }
+    }
+  }
+}

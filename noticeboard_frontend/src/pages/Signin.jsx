@@ -1,4 +1,5 @@
 import * as React from 'react'
+import {Link} from 'react-router-dom'
 function Signin() {
     return (
       <>
@@ -14,7 +15,7 @@ function Signin() {
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <img
               alt="Your Company"
-              src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+              src="https://icladdis.com/images/ICL-LOGO-NEW.png"
               className="mx-auto h-10 w-auto"
             />
             <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
@@ -68,17 +69,19 @@ function Signin() {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Sign in
+                  Login 
                 </button>
               </div>
             </form>
   
             <p className="mt-10 text-center text-sm/6 text-gray-500">
-              Not a member?{' '}
               <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                Start a 14 day free trial
+                I don't have an account <Link to= "/singup" className='font-stretch-semi-condensed'>Sign Up</Link>
               </a>
+              
             </p>
+            
+
           </div>
         </div>
       </>

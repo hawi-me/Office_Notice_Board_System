@@ -3,11 +3,11 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import {Link} from "react-router-dom"
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
+  { name: 'Home', href: '#' },
+  { name: 'Jobs', href: '#' },
+  { name: 'Events', href: '#' },
   { name: 'Company', href: '#' },
 ]
 
@@ -16,13 +16,14 @@ export default function Header() {
 
   return (
     <div className="bg-white">
+      
       <header className="absolute inset-x-0 top-0 z-50 w-full shadow-md">
         <nav className="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
           <div className="flex items-center flex-1">
             <a href="#" className="p-2">
               <span className="sr-only">Your Company</span>
               <img
-                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://icladdis.com/images/ICL-LOGO-NEW.png"
                 alt="Company Logo"
                 className="h-8 w-auto"
               />
@@ -36,9 +37,9 @@ export default function Header() {
             ))}
           </div>
           <div className="hidden md:flex md:flex-1 md:justify-end">
-            <a href="#" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+          <Link to="/signin" className="mt-4 block px-4 py-2 rounded-md text-lg font-medium text-indigo-600 hover:bg-gray-100">
+  Sign In
+</Link>
           </div>
           <div className="md:hidden">
             <button
@@ -55,10 +56,10 @@ export default function Header() {
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50" />
         <DialogPanel className="fixed inset-y-0 right-0 w-5/6 max-w-sm bg-white p-6 shadow-xl sm:w-full">
           <div className="flex items-center justify-between">
-            <a href="#" className="p-2">
+            <a href="#" className="p-4">
               <span className="sr-only">Your Company</span>
               <img
-                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://icladdis.com/images/ICL-LOGO-NEW.png"
                 alt="Company Logo"
                 className="h-8 w-auto"
               />
@@ -80,9 +81,12 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
-            <a href="#" className="mt-4 block px-4 py-2 rounded-md text-lg font-medium text-indigo-600 hover:bg-gray-100">
+            {/* <a href="/signin" className="mt-4 block px-4 py-2 rounded-md text-lg font-medium text-indigo-600 hover:bg-gray-100">
               Log in
-            </a>
+            </a> */}
+            <Link to="/signin" className="mt-4 block px-4 py-2 rounded-md text-lg font-medium text-indigo-600 hover:bg-gray-100">
+  Sign In
+</Link>
           </div>
         </DialogPanel>
       </Dialog>
