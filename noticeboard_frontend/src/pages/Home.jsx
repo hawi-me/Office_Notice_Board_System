@@ -22,6 +22,7 @@ function Home() {
     <>
       <Header></Header>
       <div className='w-full max-w-7xl flex flex-col lg:flex-row gap-6 items-center justify-between mt-25
+
       '>
       <Carousel  posts={posts} ></Carousel>
       </div>
