@@ -12,4 +12,13 @@ export default defineConfig({
         external: ['react', 'react/jsx-runtime'], // Mark React as external
       },
     },
+    server: {
+      proxy: {
+        '/api': {
+          target: 'https://demo.iclpartner.com',
+          changeOrigin: true,
+          secure: false,
+        },
+      },
+    },
 })
