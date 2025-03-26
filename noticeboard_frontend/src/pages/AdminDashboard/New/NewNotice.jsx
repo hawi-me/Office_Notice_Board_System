@@ -25,10 +25,8 @@ const New = ({ inputs, title }) => {
     setFile(e.target.files[0]);
   };
 
-  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle the submit logic here (e.g., send data to the server or local storage)
     console.log("Notice Created:", noticeData);
   };
 
@@ -65,7 +63,6 @@ const New = ({ inputs, title }) => {
                 />
               </div>
 
-              {/* Update input fields for Notice Data */}
               <div className="formInput">
                 <label>Title</label>
                 <input
